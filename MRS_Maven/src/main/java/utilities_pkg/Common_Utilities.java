@@ -6,20 +6,14 @@ import io.github.cdimascio.dotenv.Dotenv;
 
 public class Common_Utilities {
 		
-	public WebDriver initialize_driver(String browser_type) {
+	public static WebDriver initialize_driver(String browser_type) {
 		WebDriver driver = null;
-		switch (browser_type) {
-		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "C:\\java_selemium_demo\\MRS_Maven\\chromedriver.exe"); 
-			 driver = new ChromeDriver(); 			
-			break;
-		case "firefox":
-			System.setProperty("webdriver.firefox.driver", "C:\\java_selemium_demo\\MRS_Maven\\chromedriver.exe"); 
-			 driver = new FirefoxDriver(); 			
-			break;
-		default:
-			System.out.println("Invalid browser provided");
-			break;
+		if(browser_type == "chrome") {
+			System.setProperty("webdriver.chrome.driver", "/MRS_Maven/chromedriver.exe"); 
+			driver = new ChromeDriver(); 
+		} else if(browser_type == "firefox") {
+			System.setProperty("webdriver.firefox.driver", "/MRS_Maven/chromedriver.exe"); 
+			 driver = new FirefoxDriver(); 				
 		}
 		return driver;
 	}

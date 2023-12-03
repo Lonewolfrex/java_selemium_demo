@@ -32,7 +32,7 @@ public class Sample_Steps {
 
 	@When("^Select the session$")
 	public void select_the_session() throws Throwable {
-	    driver.findElement(By.id("Laboratory")).click();
+	    driver.findElement(By.id("Operation")).click();
 	}
 
 	@When("^Click the login Button$")

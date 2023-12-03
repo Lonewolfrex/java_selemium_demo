@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CucumberSuite">
+    <test name="CucumberTest">
+        <classes>
+            <class name="/MRS_Maven/src/main/java/testRunner_pkg/Sample_TestRunner.java"/>
+        </classes>
+    </test>
+</suite>
