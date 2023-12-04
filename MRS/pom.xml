@@ -4,6 +4,38 @@
   <groupId>MRS</groupId>
   <artifactId>MRS</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+	<build>
+	    <plugins>
+	        <plugin>
+	            <groupId>org.codehaus.mojo</groupId>
+	            <artifactId>exec-maven-plugin</artifactId>
+	            <version>3.0.0</version>
+	            <executions>
+	                <execution>
+	                    <goals>
+	                        <goal>java</goal>
+	                    </goals>
+	                </execution>
+	            </executions>
+	            <configuration>
+	                <mainClass>testRunner_pkg.Sample_TestRunner.java</mainClass>
+	            </configuration>
+	        </plugin>
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-compiler-plugin</artifactId>
+	            <version>3.8.1</version> <!-- Use the latest version -->
+	            <configuration>
+	                <source>1.8</source> <!-- Set your desired source version (e.g., 1.8 for Java 8) -->
+	                <target>1.8</target> <!-- Set your desired target version (e.g., 1.8 for Java 8) -->
+	            </configuration>
+	        </plugin>	        
+	    </plugins>
+	</build>
 	<dependencies>
 		<dependency>
 		    <groupId>io.cucumber</groupId>
