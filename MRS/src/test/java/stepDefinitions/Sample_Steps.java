@@ -26,7 +26,7 @@ public class Sample_Steps {
 
 	@When("^Enter the Username and Password$")
 	public void enter_the_Username_and_Password() throws Throwable {
-	    driver.findElement(By.id("username")).sendKeys("admin");
+	    driver.findElement(By.id("username")).sendKeys("admin1");
 	    driver.findElement(By.id("password")).sendKeys("Admin123");
 	}
 
